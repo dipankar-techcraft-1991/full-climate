@@ -8,3 +8,4 @@ I have given name of the assignment is **_"Full Climate"_**.
 **_Functionality:_** It may include features like **_search_** functionality to find current conditions and forecasts for multiple cities.
 
 **_Interactivity:_** Users can interact with the dashboard to check the weather for their **location** or for different **places** they are interested in.
+# full-climate
