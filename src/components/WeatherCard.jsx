@@ -21,6 +21,8 @@ const WeatherCard = ({
   const [icon, setIcon] = useState(sun);
   const { time } = useDate();
 
+  let temp = temperature;
+
   useEffect(() => {
     if (iconString) {
       if (iconString.toLowerCase().includes("cloud")) {
@@ -42,7 +44,7 @@ const WeatherCard = ({
         setIcon(wind);
       }
     }
-  }, [iconString]);
+  }, [iconString, temperature]);
 
   return (
     <div className="glassCard h-[30rem] w-[22rem] min-w-[22rem] p-4">
@@ -55,7 +57,7 @@ const WeatherCard = ({
       <div className="just-center mb-4 mt-6 flex w-full items-center gap-4">
         <img src={icon} alt="weather_icon" />
         <p className="flex items-center justify-center text-5xl font-bold">
-          {temperature}&deg;C
+          {temp}&deg;C
         </p>
       </div>
       <div className="text-center text-xl font-bold">{place}</div>
