@@ -15,7 +15,6 @@ const WeatherCard = ({
   windspeed,
   humidity,
   place,
-  heatIndex,
   iconString,
   conditions,
 }) => {
@@ -53,7 +52,7 @@ const WeatherCard = ({
 
       <hr className="mt-2 bg-slate-600" />
 
-      <div className="just-center, mb-4 mt-4 flex w-full items-center gap-4">
+      <div className="just-center mb-4 mt-6 flex w-full items-center gap-4">
         <img src={icon} alt="weather_icon" />
         <p className="flex items-center justify-center text-5xl font-bold">
           {temperature}&deg;C
@@ -71,10 +70,6 @@ const WeatherCard = ({
         <p className="flex-1 rounded-lg bg-green-600 p-2 text-center font-bold">
           Humidity <p className="font-normal">{humidity} gm/m&#179;</p>
         </p>
-      </div>
-      <div className="mt-4 flex w-full items-center justify-between p-3">
-        <p className="text-lg font-semibold">Heat Index</p>
-        <p className="text-lg">{heatIndex ? heatIndex : "N/A"}</p>
       </div>
     </div>
   );

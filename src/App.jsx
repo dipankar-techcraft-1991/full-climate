@@ -43,7 +43,6 @@ function App() {
           windspeed={weather.wspd}
           humidity={weather.humidity}
           temperature={weather.temp}
-          heatIndex={weather.heatindex}
           iconString={weather.conditions}
           conditions={weather.conditions}
         />
