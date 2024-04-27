@@ -21,8 +21,6 @@ const WeatherCard = ({
   const [icon, setIcon] = useState(sun);
   const { time } = useDate();
 
-  let temp = temperature;
-
   useEffect(() => {
     if (iconString) {
       if (iconString.toLowerCase().includes("cloud")) {
@@ -44,7 +42,7 @@ const WeatherCard = ({
         setIcon(wind);
       }
     }
-  }, [iconString, temperature]);
+  }, [iconString]);
 
   return (
     <div className="glassCard h-[30rem] w-[22rem] min-w-[22rem] p-4">
