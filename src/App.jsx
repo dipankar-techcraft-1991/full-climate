@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import search from "./assets/icons/search.svg";
 import BackgroundLayout from "./components/BackgroundLayout";
 import WeatherCard from "./components/WeatherCard";
