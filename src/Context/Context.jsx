@@ -4,34 +4,12 @@ import axios from "axios";
 
 const StateContext = createContext();
 
-
-
-
 export const StateContextProvider = ({ children }) => {
   const [weather, setWeather] = useState({});
   const [values, setValues] = useState([]);
-  const [place, setPlace] = useState(loc);
-  const [location, setLocation] = useState(location.latitude);
+  const [place, setPlace] = useState("Madhapur, Hyderabad");
+  const [location, setLocation] = useState("");
 
-  useEffect(() => {
-      const fetchLocation = () => {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            const { latitude, longitude } = position.coords;
-            setLocation({ latitude, longitude });
-          },
-          (error) => {
-            console.error('Error fetching location:', error);
-          }
-        );
-      } else {
-        console.error('Geolocation is not supported by this browser.');
-      }
-    };
-
-    fetchLocation();
-  }, []);
 
   // fetch api
   const fetchWeather = async () => {
