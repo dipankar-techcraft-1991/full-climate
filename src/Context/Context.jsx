@@ -4,7 +4,7 @@ import axios from "axios";
 
 const StateContext = createContext();
 
-useEffect(() => {
+
 
 
 export const StateContextProvider = ({ children }) => {
@@ -13,6 +13,7 @@ export const StateContextProvider = ({ children }) => {
   const [place, setPlace] = useState(loc);
   const [location, setLocation] = useState(null);
 
+  useEffect(() => {
       const fetchLocation = () => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
