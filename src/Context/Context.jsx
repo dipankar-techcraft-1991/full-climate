@@ -11,7 +11,7 @@ export const StateContextProvider = ({ children }) => {
   const [weather, setWeather] = useState({});
   const [values, setValues] = useState([]);
   const [place, setPlace] = useState(loc);
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState(location.latitude);
 
   useEffect(() => {
       const fetchLocation = () => {
@@ -30,7 +30,7 @@ export const StateContextProvider = ({ children }) => {
       }
     };
 
-    let loc = fetchLocation();
+    fetchLocation();
   }, []);
 
   // fetch api
